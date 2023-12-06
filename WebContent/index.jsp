@@ -2,9 +2,10 @@
 <html>
 <head>
         <title>Daniel's Grocery Main Page</title>
+		
 </head>
 <body>
-<h1 align="center">Welcome to Daniel's Grocery</h1>
+<h1 align="center">D and K Real Estate</h1>
 
 <h2 align="center"><a href="login.jsp">Login</a></h2>
 

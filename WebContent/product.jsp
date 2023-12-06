@@ -44,13 +44,13 @@ if (useImgUrl && !imgUrl.equals("null"))
 }
 
 // TODO: Retrieve any image stored directly in database. Note: Call displayImage.jsp with product id as parameter.
-boolean useImgBin = true;
+/*boolean useImgBin = true;
 try { imgBin += ""; }
 catch (Exception e) { useImgUrl = false; }
 if (useImgUrl && !imgBin.equals("null"))
 {
     out.println("<t><img src = \"displayImage.jsp?id="+productId+"\">");
-}
+}*/
 NumberFormat currFormat = NumberFormat.getCurrencyInstance();
 out.print("<table><tr><th>Id</th><td>"+name+"</td></tr><tr><th>Price</th><td>"+currFormat.format(price)+"</td></tr></table>");
 // TODO: Add links to Add to Cart and Continue Shopping

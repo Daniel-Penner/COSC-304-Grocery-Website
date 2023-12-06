@@ -40,12 +40,15 @@ String url = "jdbc:sqlserver://cosc304_sqlserver:1433;DatabaseName=orders;TrustS
     String pw = "304#sa#pw";
     try ( Connection con = DriverManager.getConnection(url, uid, pw); Statement stmt = con.createStatement();) 
         {
+
             DecimalFormat format = new DecimalFormat("$#0.00");
+            format.setGroupingUsed(true);
+            format.setGroupingSize(3);
             String sql;
             if(name != null){
-            sql = "SELECT productId, productName, productPrice FROM Product WHERE productName LIKE '%'+?+'%'";
+            sql = "SELECT productId, productName, productPrice FROM Product WHERE productName LIKE '%'+?+'%' ORDER BY productPrice";
             }
-            else sql =     "SELECT productId, productName, productPrice FROM Product";
+            else sql =     "SELECT productId, productName, productPrice FROM Product ORDER BY productPrice";
             PreparedStatement pstmt = con.prepareStatement(sql);
             if(name != null){
             pstmt.setString(1, name);
