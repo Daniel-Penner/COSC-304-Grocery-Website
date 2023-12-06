@@ -50,8 +50,8 @@
 			<a href=showcart.jsp>Cart</a>
 			<a href=admin.jsp>Administrators</a>
 			<div class = "logout">
-			<a href=login.jsp>Login</a>
-			<a href=login.jsp>Account</a>
+			<a href=register.jsp>Login/Register</a>
+			<a href=account.jsp>Account</a>
 			<a href=logout.jsp>Log out</a></div>
 			</div>
 

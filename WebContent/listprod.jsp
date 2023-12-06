@@ -121,7 +121,7 @@
         
         <div class="navbar">
           <a href=index.jsp>Home</a>
-          <a href=login.jsp>Account</a>
+          <a href=account.jsp>Account</a>
           <a href=showcart.jsp>Cart</a>
           <div class="dropdown">
             <button class="dropbtn">Category 
@@ -213,15 +213,15 @@ String url = "jdbc:sqlserver://cosc304_sqlserver:1433;DatabaseName=orders;TrustS
             format.setGroupingSize(3);
             String sql;
             if(name != null && category != null){
-            sql = "SELECT productId, productName, productPrice, productImageURL FROM Product WHERE productName LIKE '%'+?+'%' AND categoryId = ? ORDER BY productPrice";
+            sql = "SELECT productId, productName, productPrice, productImageURL FROM product WHERE productName LIKE '%'+?+'%' AND categoryId = ? ORDER BY productPrice";
             }
-            else if(name != null){
-                sql = "SELECT productId, productName, productPrice, productImageURL FROM Product WHERE productName LIKE '%'+?+'%' ORDER BY productPrice";
+            if(name != null){
+                sql = "SELECT productId, productName, productPrice, productImageURL FROM product WHERE productName LIKE '%'+?+'%' ORDER BY productPrice";
             }
             else if(category != null){
-                sql = "SELECT productId, productName, productPrice, productImageURL FROM Product WHERE categoryId = ? ORDER BY productPrice";
+                sql = "SELECT productId, productName, productPrice, productImageURL FROM product WHERE categoryId = ? ORDER BY productPrice";
                 }
-            else sql =     "SELECT productId, productName, productPrice, productImageURL FROM Product ORDER BY productPrice";
+            else sql = "SELECT productId, productName, productPrice, productImageURL FROM product ORDER BY productPrice";
             PreparedStatement pstmt = con.prepareStatement(sql);
             if(name != null && category != null){
             pstmt.setString(1, name); pstmt.setString(2, category);

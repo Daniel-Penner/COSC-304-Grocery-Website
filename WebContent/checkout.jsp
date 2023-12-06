@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Daniel's Grocery CheckOut Line</title>
+<title>D and K Real Estate</title>
 </head>
 <body>
 
+    
 <h1>Enter your customer id to complete the transaction:</h1>
 
 <form method="get" action="order.jsp">

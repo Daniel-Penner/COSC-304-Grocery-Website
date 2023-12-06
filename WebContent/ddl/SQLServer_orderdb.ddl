@@ -163,7 +163,7 @@ INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Subu
 INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Family Home',4,'A good place to raise kids.',1200000.00);
 INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Suburban Castle',4,'Not very practical but cool nevertheless.',1500000.00);
 INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Small Forest Cabin',5,'For antisocial recluses.',200000.00);
-INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Fancy Forest Cabin',5,'Good second home if you're rich and like the forest.',750000.00);
+INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Fancy Forest Cabin',5,'Good second home for rich people who like the forest.',750000.00);
 INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Expansive Forest Lodge',5,'The ultimate glamping experience.',1200000.00);
 INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Modest Mansion',6,'About as expensive as the penthouse, but all around less cool.',2250000.00);
 INSERT product(productName, categoryId, productDesc, productPrice) VALUES ('Modern Mansion',6,'Beautiful hillside home.',7500000.00);
@@ -238,3 +238,4 @@ UPDATE Product SET productImageURL = 'img/15.jpg' WHERE ProductId = 15;
 UPDATE Product SET productImageURL = 'img/16.jpg' WHERE ProductId = 16;
 UPDATE Product SET productImageURL = 'img/17.jpg' WHERE ProductId = 17;
 UPDATE Product SET productImageURL = 'img/18.jpg' WHERE ProductId = 18;
+go
