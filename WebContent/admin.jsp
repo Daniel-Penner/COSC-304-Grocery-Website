@@ -45,6 +45,7 @@
 		<a href=index.jsp>Home</a>
 		<a href=listprod.jsp>Begin Shopping</a>
 		<a href=showcart.jsp>Cart</a>
+		<a href=reset.jsp>Reset Database</a>
 		<div class = "logout">
 			<a href=account.jsp>Account</a>
 		<a href=logout.jsp>Log out</a></div>

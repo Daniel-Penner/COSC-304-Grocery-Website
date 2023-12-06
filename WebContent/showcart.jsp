@@ -56,8 +56,7 @@
 				@SuppressWarnings({"unchecked"})
 				HashMap<String, ArrayList<Object>> x = (HashMap<String, ArrayList<Object>>) session.getAttribute("productList");
 
-				if (x == null)
-				{	out.println("<H1>Your shopping cart is empty!</H1>");
+				if (x == null){
 				out.println("</div>");
 				}
 				else if (x.size() == 0){
@@ -107,7 +106,7 @@ if (productList == null)
 {	out.println("<H1>Your shopping cart is empty!</H1>");
 	productList = new HashMap<String, ArrayList<Object>>();
 }
-if (productList.size() == 0){
+else if (productList.size() == 0){
 	out.println("<H1>Your shopping cart is empty!</H1>");
 }
 else

@@ -2,7 +2,7 @@
 <%@ page import="java.util.Scanner" %>
 <%@ page import="java.io.File" %>
 <%@ include file="jdbc.jsp" %>
-<%@include file = "index.jsp"%>
+<%@ include file ="logout.jsp"%>
 
 <html>
 <head>
@@ -52,13 +52,13 @@ try ( Connection con = DriverManager.getConnection(urlForLoadData, uid, pw); )
         }
         catch (Exception e)
         {	// Keep running on exception.  This is mostly for DROP TABLE if table does not exist.
-        //    if (!e.toString().contains("Database 'orders' already exists"))    // Ignore error when database already exists
-               //out.println(e+"<br>");
+            //if (!e.toString().contains("Database 'orders' already exists"))    // Ignore error when database already exists
+                //out.println(e+"<br>");
         }
     }	 
     scanner.close();
     
-    out.print("<br><br><h1>Database Loaded Successfully!.</h1>");
+    //out.print("<br><br><h1>Database loaded.</h1>");
 }
 catch (Exception e)
 {
