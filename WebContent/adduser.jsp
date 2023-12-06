@@ -14,10 +14,8 @@
 	if(authenticatedUser != null)
 		response.sendRedirect("index.jsp");		// Successful login
 	else
-		response.sendRedirect("login.jsp");		// Failed login - redirect back to login page with a message 
+		response.sendRedirect("register.jsp");		// Failed login - redirect back to login page with a message 
 %>
-
-
 <%!
 	String validateLogin(JspWriter out,HttpServletRequest request, HttpSession session) throws IOException
 	{
@@ -35,17 +33,11 @@
 			getConnection();
 			
 			// TODO: Check if userId and password match some customer account. If so, set retStr to be the username.
-			String sql  = "SELECT userId, password FROM customer";
+			String sql  = "INSERT INTO customer (userid, password) VALUES('"+username+"', '"+password+"')";
 			PreparedStatement p = con.prepareStatement(sql); 
-			ResultSet r = p.executeQuery();
-			while (r.next()){
-		if (username.toLowerCase().equals(r.getString(1).toLowerCase()) && password.equals(r.getString(2)))
-		{
-			retStr = password;
-			break;	
-		}
+			p.execute();
+            retStr = username;
 	}		
-		} 
 		catch (SQLException ex) {
 			out.println(ex);
 		}

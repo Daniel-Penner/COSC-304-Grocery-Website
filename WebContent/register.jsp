@@ -105,18 +105,15 @@ a {
     <div class="container">
       <div class = header><h1>Register</h1></div>
       <div class = box>
-        <form action="action_page.php">
+        <form action="adduser.jsp">
       <h2>Please fill in this form to create an account.</h2>
       <hr>
   
       <label for="email"><b>Username</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      <input type="text" placeholder="Enter Username" name="username" id="username" required>
   
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-  
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+      <input type="password" placeholder="Enter Password" name="password" id="password" required>
       <hr>
       <button type="submit" class="registerbtn">Register</button>
       <p>Already have an account? <a href="login.jsp">Sign in</a>.</p>
