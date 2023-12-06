@@ -47,6 +47,7 @@
 		<div class="navbar">
 			<a href=index.jsp>Home</a>
 			<a href=listprod.jsp>Begin Shopping</a>
+			<a href=showcart.jsp>Cart</a>
 			<a href=admin.jsp>Administrators</a>
 			<div class = "logout">
 			<a href=login.jsp>Login</a>
@@ -73,22 +74,42 @@
 		.box {
 			float: none;
 			border: 2px solid #000000;
-			padding: 8px 12px;
 			background-color: rgb(158,158,158);
+			padding-left: 80px;
+			padding-top: 50px;
+			padding-bottom: 50px;
 		  }
-		</style>
+		.column {
+			float: left;
+			width: 33%;
+		  }
+		  .column-right{
+			float: right;
+			width: 30%;
+		  }
+		  
+		  /* Clear floats after image containers */
+		  .row::after {
+			content: "";
+			clear: both;
+			display: table;
+		  }
+		  </style>
 		<div class = "box">
-<h2 align="center"><a href="login.jsp">Login</a></h2>
+			<div class = "row">
+			<div class="column">
+				<img src="img/9.jpg" alt="Palace">
+			</div>
+			<div class = "column">
+				<img src="img/18.jpg" alt="Modern Mansion">
+			</div>
+			<div class = "column">
+				<img src = img/17.jpg alt = "Penthouse">
+			</div>
+			</div>
 
-<h2 align="center"><a href="listprod.jsp">Begin Shopping</a></h2>
 
-<h2 align="center"><a href="listorder.jsp">List All Orders</a></h2>
-
-<h2 align="center"><a href="customer.jsp">Customer Info</a></h2>
-
-<h2 align="center"><a href="admin.jsp">Administrators</a></h2>
-
-<h2 align="center"><a href="logout.jsp">Log out</a></h2>
+</div>
 <!--
 <h4 align="center"><a href="ship.jsp?orderId=1">Test Ship orderId=1</a></h4>
 
